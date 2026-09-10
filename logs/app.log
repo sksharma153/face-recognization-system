@@ -1,0 +1,66 @@
+2026-07-29 23:43:15,279 | INFO     | root | Before Add: 1
+2026-07-29 23:43:15,281 | INFO     | root | After Add: 2
+2026-07-29 23:43:15,285 | INFO     | root | After Save: 2
+2026-07-29 23:43:15,285 | INFO     | root | Index Path: /Users/sandeepkumarsharma/Downloads/face-recognization-system/faiss/faiss.index
+2026-07-29 23:43:15,285 | ERROR    | face-recognization | Unhandled exception
+Traceback (most recent call last):
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/starlette/routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/fastapi/routing.py", line 2692, in app
+    await route.handle(scope, receive, send)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/fastapi/routing.py", line 1773, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/fastapi/routing.py", line 2747, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/fastapi/routing.py", line 1793, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/fastapi/routing.py", line 1272, in handle
+    await app(scope, receive, send)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/fastapi/routing.py", line 156, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/fastapi/routing.py", line 142, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/fastapi/routing.py", line 698, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/venv/lib/python3.13/site-packages/fastapi/routing.py", line 350, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/app/api/register.py", line 20, in register_person
+    person_id = person_service.register_person(
+        name,
+    ...<3 lines>...
+        image
+    )
+  File "/Users/sandeepkumarsharma/Downloads/face-recognization-system/app/services/person_service.py", line 56, in register_person
+    "created_at": datetime.utcnow()
+                  ^^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'utcnow'
+2026-07-29 23:44:36,614 | INFO     | root | Before Add: 2
+2026-07-29 23:44:36,615 | INFO     | root | After Add: 3
+2026-07-29 23:44:36,616 | INFO     | root | After Save: 3
+2026-07-29 23:44:36,616 | INFO     | root | Index Path: /Users/sandeepkumarsharma/Downloads/face-recognization-system/faiss/faiss.index
+2026-08-02 00:37:47,205 | INFO     | face-recognization | ========== START REGISTER ==========
+2026-08-02 00:37:48,544 | INFO     | root | Before Add: 3
+2026-08-02 00:37:48,545 | INFO     | root | After Add: 4
+2026-08-02 00:37:48,547 | INFO     | root | After Save: 4
+2026-08-02 00:37:48,547 | INFO     | root | Index Path: /Users/sandeepkumarsharma/Downloads/face-recognization-system/faiss/faiss.index
+2026-08-02 00:37:48,564 | INFO     | face-recognization | ========== END REGISTER ==========
